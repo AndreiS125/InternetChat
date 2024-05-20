@@ -25,16 +25,6 @@ def recv(conn, logen):
             if(logen!=user):
                 send(users[user],m)
 
-
-
-
-
-
-
-
-
-
-
 sock = socket.socket()
 sock.bind(("127.0.0.1", 9090))
 
@@ -43,7 +33,6 @@ sock.listen(10)
 
 while True:
     conn, addr = sock.accept()
-    print("Есть контакт!")
     a = conn.recv(4)
     print(a)
     size = struct.unpack("<I", a)[0]
